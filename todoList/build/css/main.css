@@ -1,0 +1,1487 @@
+/* Fonts
+-------------------------------------------------- */
+/* Color
+-------------------------------------------------- */
+.blink {
+  animation: blink 1s linear infinite; }
+
+@keyframes blink {
+  50% {
+    opacity: 0; } }
+
+@-webkit-keyframes flicker {
+  0%, 49% {
+    background-color: rgba(255, 255, 255, 0);
+    color: #000; }
+  50%, 100% {
+    background-color: red;
+    /* fff500 */
+    color: #fff; } }
+
+/* Anwendung:
+@include borderRadius(5px);
+-------------------------------------------------- */
+/* Don't forget to create Keyframe first */
+/* codepen.io/MadeByMike/pen/bEEGvv/ */
+/* does not need to come after the reset, so it stays here on top */
+/* stuff similar to vendors in js */
+/*! * * * * * * * * * * * * * * * * * * * *\
+  CSShake :: Package
+  v1.5.0
+  CSS classes to move your DOM
+  (c) 2015 @elrumordelaluz
+  http://elrumordelaluz.github.io/csshake/
+  Licensed under MIT
+\* * * * * * * * * * * * * * * * * * * * */
+.shake, .shake-little, .shake-slow, .shake-hard, .shake-horizontal, .shake-vertical, .shake-rotate, .shake-opacity, .shake-crazy, .shake-chunk {
+  display: inline-block;
+  transform-origin: center center; }
+
+.shake-freeze,
+.shake-constant.shake-constant--hover:hover,
+.shake-trigger:hover .shake-constant.shake-constant--hover {
+  animation-play-state: paused; }
+
+.shake-freeze:hover,
+.shake-trigger:hover .shake-freeze, .shake:hover,
+.shake-trigger:hover .shake, .shake-little:hover,
+.shake-trigger:hover .shake-little, .shake-slow:hover,
+.shake-trigger:hover .shake-slow, .shake-hard:hover,
+.shake-trigger:hover .shake-hard, .shake-horizontal:hover,
+.shake-trigger:hover .shake-horizontal, .shake-vertical:hover,
+.shake-trigger:hover .shake-vertical, .shake-rotate:hover,
+.shake-trigger:hover .shake-rotate, .shake-opacity:hover,
+.shake-trigger:hover .shake-opacity, .shake-crazy:hover,
+.shake-trigger:hover .shake-crazy, .shake-chunk:hover,
+.shake-trigger:hover .shake-chunk {
+  animation-play-state: running; }
+
+@keyframes shake {
+  2% {
+    transform: translate(-0.5px, -0.5px) rotate(0.5deg); }
+  4% {
+    transform: translate(2.5px, -1.5px) rotate(-0.5deg); }
+  6% {
+    transform: translate(2.5px, 0.5px) rotate(1.5deg); }
+  8% {
+    transform: translate(-0.5px, 2.5px) rotate(-0.5deg); }
+  10% {
+    transform: translate(1.5px, -0.5px) rotate(1.5deg); }
+  12% {
+    transform: translate(0.5px, -1.5px) rotate(-0.5deg); }
+  14% {
+    transform: translate(0.5px, -1.5px) rotate(0.5deg); }
+  16% {
+    transform: translate(-0.5px, 0.5px) rotate(0.5deg); }
+  18% {
+    transform: translate(-1.5px, 1.5px) rotate(0.5deg); }
+  20% {
+    transform: translate(-0.5px, -1.5px) rotate(-0.5deg); }
+  22% {
+    transform: translate(1.5px, 1.5px) rotate(0.5deg); }
+  24% {
+    transform: translate(-1.5px, 2.5px) rotate(1.5deg); }
+  26% {
+    transform: translate(-0.5px, 0.5px) rotate(0.5deg); }
+  28% {
+    transform: translate(-1.5px, 1.5px) rotate(-0.5deg); }
+  30% {
+    transform: translate(1.5px, 0.5px) rotate(0.5deg); }
+  32% {
+    transform: translate(1.5px, -0.5px) rotate(0.5deg); }
+  34% {
+    transform: translate(2.5px, 1.5px) rotate(-0.5deg); }
+  36% {
+    transform: translate(-1.5px, -0.5px) rotate(-0.5deg); }
+  38% {
+    transform: translate(1.5px, 2.5px) rotate(-0.5deg); }
+  40% {
+    transform: translate(-0.5px, -1.5px) rotate(0.5deg); }
+  42% {
+    transform: translate(0.5px, 0.5px) rotate(0.5deg); }
+  44% {
+    transform: translate(1.5px, 1.5px) rotate(-0.5deg); }
+  46% {
+    transform: translate(-1.5px, 0.5px) rotate(-0.5deg); }
+  48% {
+    transform: translate(1.5px, 1.5px) rotate(1.5deg); }
+  50% {
+    transform: translate(0.5px, -0.5px) rotate(0.5deg); }
+  52% {
+    transform: translate(-0.5px, 0.5px) rotate(1.5deg); }
+  54% {
+    transform: translate(1.5px, -1.5px) rotate(0.5deg); }
+  56% {
+    transform: translate(-0.5px, -1.5px) rotate(1.5deg); }
+  58% {
+    transform: translate(2.5px, 1.5px) rotate(0.5deg); }
+  60% {
+    transform: translate(-0.5px, -0.5px) rotate(1.5deg); }
+  62% {
+    transform: translate(1.5px, 2.5px) rotate(-0.5deg); }
+  64% {
+    transform: translate(-1.5px, 0.5px) rotate(-0.5deg); }
+  66% {
+    transform: translate(2.5px, 1.5px) rotate(-0.5deg); }
+  68% {
+    transform: translate(2.5px, 0.5px) rotate(1.5deg); }
+  70% {
+    transform: translate(-1.5px, -1.5px) rotate(0.5deg); }
+  72% {
+    transform: translate(-1.5px, -0.5px) rotate(-0.5deg); }
+  74% {
+    transform: translate(-0.5px, -1.5px) rotate(1.5deg); }
+  76% {
+    transform: translate(1.5px, 1.5px) rotate(0.5deg); }
+  78% {
+    transform: translate(1.5px, -0.5px) rotate(1.5deg); }
+  80% {
+    transform: translate(-0.5px, 1.5px) rotate(1.5deg); }
+  82% {
+    transform: translate(2.5px, 2.5px) rotate(0.5deg); }
+  84% {
+    transform: translate(-0.5px, 0.5px) rotate(1.5deg); }
+  86% {
+    transform: translate(1.5px, -0.5px) rotate(1.5deg); }
+  88% {
+    transform: translate(2.5px, -1.5px) rotate(0.5deg); }
+  90% {
+    transform: translate(0.5px, -1.5px) rotate(-0.5deg); }
+  92% {
+    transform: translate(-0.5px, -1.5px) rotate(1.5deg); }
+  94% {
+    transform: translate(2.5px, 0.5px) rotate(1.5deg); }
+  96% {
+    transform: translate(-0.5px, -1.5px) rotate(-0.5deg); }
+  98% {
+    transform: translate(-0.5px, -1.5px) rotate(0.5deg); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+
+.shake:hover,
+.shake-trigger:hover .shake, .shake.shake-freeze, .shake.shake-constant {
+  animation-name: shake;
+  animation-duration: 100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+
+@keyframes shake-little {
+  2% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  4% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  6% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  8% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  10% {
+    transform: translate(1px, 0px) rotate(0.5deg); }
+  12% {
+    transform: translate(0px, 1px) rotate(0.5deg); }
+  14% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  16% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  18% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  20% {
+    transform: translate(1px, 0px) rotate(0.5deg); }
+  22% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  24% {
+    transform: translate(0px, 1px) rotate(0.5deg); }
+  26% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  28% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  30% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  32% {
+    transform: translate(1px, 0px) rotate(0.5deg); }
+  34% {
+    transform: translate(1px, 0px) rotate(0.5deg); }
+  36% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  38% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  40% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  42% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  44% {
+    transform: translate(1px, 0px) rotate(0.5deg); }
+  46% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  48% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  50% {
+    transform: translate(1px, 0px) rotate(0.5deg); }
+  52% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  54% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  56% {
+    transform: translate(1px, 0px) rotate(0.5deg); }
+  58% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  60% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  62% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  64% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  66% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  68% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  70% {
+    transform: translate(1px, 0px) rotate(0.5deg); }
+  72% {
+    transform: translate(1px, 0px) rotate(0.5deg); }
+  74% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  76% {
+    transform: translate(0px, 1px) rotate(0.5deg); }
+  78% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  80% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  82% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  84% {
+    transform: translate(0px, 0px) rotate(0.5deg); }
+  86% {
+    transform: translate(1px, 0px) rotate(0.5deg); }
+  88% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  90% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  92% {
+    transform: translate(1px, 0px) rotate(0.5deg); }
+  94% {
+    transform: translate(1px, 0px) rotate(0.5deg); }
+  96% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  98% {
+    transform: translate(1px, 1px) rotate(0.5deg); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+
+.shake-little:hover,
+.shake-trigger:hover .shake-little, .shake-little.shake-freeze, .shake-little.shake-constant {
+  animation-name: shake-little;
+  animation-duration: 100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+
+@keyframes shake-slow {
+  2% {
+    transform: translate(4px, 4px) rotate(1.5deg); }
+  4% {
+    transform: translate(-5px, 10px) rotate(-1.5deg); }
+  6% {
+    transform: translate(7px, 2px) rotate(0.5deg); }
+  8% {
+    transform: translate(5px, -7px) rotate(1.5deg); }
+  10% {
+    transform: translate(-2px, 10px) rotate(2.5deg); }
+  12% {
+    transform: translate(-1px, -9px) rotate(-1.5deg); }
+  14% {
+    transform: translate(-1px, 5px) rotate(2.5deg); }
+  16% {
+    transform: translate(3px, 1px) rotate(2.5deg); }
+  18% {
+    transform: translate(6px, 7px) rotate(-0.5deg); }
+  20% {
+    transform: translate(2px, -7px) rotate(-1.5deg); }
+  22% {
+    transform: translate(-8px, 9px) rotate(-1.5deg); }
+  24% {
+    transform: translate(8px, 3px) rotate(-0.5deg); }
+  26% {
+    transform: translate(6px, 0px) rotate(-1.5deg); }
+  28% {
+    transform: translate(-2px, -3px) rotate(1.5deg); }
+  30% {
+    transform: translate(-5px, -9px) rotate(-1.5deg); }
+  32% {
+    transform: translate(-9px, -8px) rotate(-2.5deg); }
+  34% {
+    transform: translate(7px, 1px) rotate(-0.5deg); }
+  36% {
+    transform: translate(-3px, 10px) rotate(3.5deg); }
+  38% {
+    transform: translate(-4px, 10px) rotate(2.5deg); }
+  40% {
+    transform: translate(5px, 10px) rotate(-0.5deg); }
+  42% {
+    transform: translate(10px, -5px) rotate(0.5deg); }
+  44% {
+    transform: translate(2px, 7px) rotate(-0.5deg); }
+  46% {
+    transform: translate(6px, -5px) rotate(3.5deg); }
+  48% {
+    transform: translate(3px, -1px) rotate(-2.5deg); }
+  50% {
+    transform: translate(0px, -1px) rotate(2.5deg); }
+  52% {
+    transform: translate(-7px, -7px) rotate(3.5deg); }
+  54% {
+    transform: translate(-3px, 10px) rotate(-2.5deg); }
+  56% {
+    transform: translate(1px, 5px) rotate(-0.5deg); }
+  58% {
+    transform: translate(1px, 0px) rotate(-0.5deg); }
+  60% {
+    transform: translate(-9px, -1px) rotate(-0.5deg); }
+  62% {
+    transform: translate(2px, -3px) rotate(0.5deg); }
+  64% {
+    transform: translate(-5px, 8px) rotate(-2.5deg); }
+  66% {
+    transform: translate(-3px, 4px) rotate(2.5deg); }
+  68% {
+    transform: translate(5px, 9px) rotate(-2.5deg); }
+  70% {
+    transform: translate(-6px, 8px) rotate(1.5deg); }
+  72% {
+    transform: translate(-1px, 1px) rotate(2.5deg); }
+  74% {
+    transform: translate(2px, 6px) rotate(3.5deg); }
+  76% {
+    transform: translate(-5px, -7px) rotate(-1.5deg); }
+  78% {
+    transform: translate(-1px, -4px) rotate(-1.5deg); }
+  80% {
+    transform: translate(0px, 3px) rotate(2.5deg); }
+  82% {
+    transform: translate(4px, 10px) rotate(-2.5deg); }
+  84% {
+    transform: translate(1px, 8px) rotate(2.5deg); }
+  86% {
+    transform: translate(-9px, 5px) rotate(3.5deg); }
+  88% {
+    transform: translate(3px, 9px) rotate(1.5deg); }
+  90% {
+    transform: translate(0px, -2px) rotate(-2.5deg); }
+  92% {
+    transform: translate(-5px, 5px) rotate(-0.5deg); }
+  94% {
+    transform: translate(-6px, 0px) rotate(-0.5deg); }
+  96% {
+    transform: translate(5px, -6px) rotate(3.5deg); }
+  98% {
+    transform: translate(5px, 4px) rotate(-0.5deg); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+
+.shake-slow:hover,
+.shake-trigger:hover .shake-slow, .shake-slow.shake-freeze, .shake-slow.shake-constant {
+  animation-name: shake-slow;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+
+@keyframes shake-hard {
+  2% {
+    transform: translate(-4px, 2px) rotate(-2.5deg); }
+  4% {
+    transform: translate(-7px, 9px) rotate(-1.5deg); }
+  6% {
+    transform: translate(0px, 4px) rotate(-2.5deg); }
+  8% {
+    transform: translate(9px, -4px) rotate(-1.5deg); }
+  10% {
+    transform: translate(6px, 4px) rotate(1.5deg); }
+  12% {
+    transform: translate(-6px, -9px) rotate(-0.5deg); }
+  14% {
+    transform: translate(9px, -9px) rotate(-0.5deg); }
+  16% {
+    transform: translate(-2px, 2px) rotate(-2.5deg); }
+  18% {
+    transform: translate(8px, -2px) rotate(-1.5deg); }
+  20% {
+    transform: translate(-2px, -8px) rotate(1.5deg); }
+  22% {
+    transform: translate(3px, 8px) rotate(-2.5deg); }
+  24% {
+    transform: translate(2px, 10px) rotate(0.5deg); }
+  26% {
+    transform: translate(-3px, 8px) rotate(-0.5deg); }
+  28% {
+    transform: translate(10px, 0px) rotate(-1.5deg); }
+  30% {
+    transform: translate(7px, 5px) rotate(2.5deg); }
+  32% {
+    transform: translate(7px, 6px) rotate(1.5deg); }
+  34% {
+    transform: translate(0px, 9px) rotate(0.5deg); }
+  36% {
+    transform: translate(10px, -8px) rotate(0.5deg); }
+  38% {
+    transform: translate(-1px, 9px) rotate(3.5deg); }
+  40% {
+    transform: translate(-6px, 2px) rotate(2.5deg); }
+  42% {
+    transform: translate(-1px, -8px) rotate(-1.5deg); }
+  44% {
+    transform: translate(-9px, 4px) rotate(1.5deg); }
+  46% {
+    transform: translate(-8px, -6px) rotate(1.5deg); }
+  48% {
+    transform: translate(-2px, 8px) rotate(-2.5deg); }
+  50% {
+    transform: translate(3px, 9px) rotate(-2.5deg); }
+  52% {
+    transform: translate(7px, -9px) rotate(3.5deg); }
+  54% {
+    transform: translate(-6px, 4px) rotate(-2.5deg); }
+  56% {
+    transform: translate(2px, -4px) rotate(-2.5deg); }
+  58% {
+    transform: translate(4px, -9px) rotate(2.5deg); }
+  60% {
+    transform: translate(-1px, 4px) rotate(-1.5deg); }
+  62% {
+    transform: translate(-8px, -5px) rotate(-1.5deg); }
+  64% {
+    transform: translate(-5px, -6px) rotate(-2.5deg); }
+  66% {
+    transform: translate(9px, -7px) rotate(2.5deg); }
+  68% {
+    transform: translate(-6px, -3px) rotate(-0.5deg); }
+  70% {
+    transform: translate(6px, -8px) rotate(1.5deg); }
+  72% {
+    transform: translate(9px, 8px) rotate(0.5deg); }
+  74% {
+    transform: translate(7px, 1px) rotate(2.5deg); }
+  76% {
+    transform: translate(-9px, -4px) rotate(1.5deg); }
+  78% {
+    transform: translate(-8px, 0px) rotate(-0.5deg); }
+  80% {
+    transform: translate(6px, -7px) rotate(1.5deg); }
+  82% {
+    transform: translate(8px, -2px) rotate(2.5deg); }
+  84% {
+    transform: translate(4px, -5px) rotate(1.5deg); }
+  86% {
+    transform: translate(6px, 5px) rotate(-1.5deg); }
+  88% {
+    transform: translate(-2px, -2px) rotate(-1.5deg); }
+  90% {
+    transform: translate(-3px, 4px) rotate(-0.5deg); }
+  92% {
+    transform: translate(-6px, -4px) rotate(-0.5deg); }
+  94% {
+    transform: translate(6px, -7px) rotate(2.5deg); }
+  96% {
+    transform: translate(-5px, -3px) rotate(3.5deg); }
+  98% {
+    transform: translate(5px, 9px) rotate(-2.5deg); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+
+.shake-hard:hover,
+.shake-trigger:hover .shake-hard, .shake-hard.shake-freeze, .shake-hard.shake-constant {
+  animation-name: shake-hard;
+  animation-duration: 100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+
+@keyframes shake-horizontal {
+  2% {
+    transform: translate(0px, 0) rotate(0); }
+  4% {
+    transform: translate(4px, 0) rotate(0); }
+  6% {
+    transform: translate(-5px, 0) rotate(0); }
+  8% {
+    transform: translate(8px, 0) rotate(0); }
+  10% {
+    transform: translate(3px, 0) rotate(0); }
+  12% {
+    transform: translate(4px, 0) rotate(0); }
+  14% {
+    transform: translate(-6px, 0) rotate(0); }
+  16% {
+    transform: translate(9px, 0) rotate(0); }
+  18% {
+    transform: translate(-6px, 0) rotate(0); }
+  20% {
+    transform: translate(6px, 0) rotate(0); }
+  22% {
+    transform: translate(9px, 0) rotate(0); }
+  24% {
+    transform: translate(-1px, 0) rotate(0); }
+  26% {
+    transform: translate(-2px, 0) rotate(0); }
+  28% {
+    transform: translate(3px, 0) rotate(0); }
+  30% {
+    transform: translate(10px, 0) rotate(0); }
+  32% {
+    transform: translate(3px, 0) rotate(0); }
+  34% {
+    transform: translate(-9px, 0) rotate(0); }
+  36% {
+    transform: translate(8px, 0) rotate(0); }
+  38% {
+    transform: translate(-2px, 0) rotate(0); }
+  40% {
+    transform: translate(1px, 0) rotate(0); }
+  42% {
+    transform: translate(-5px, 0) rotate(0); }
+  44% {
+    transform: translate(-4px, 0) rotate(0); }
+  46% {
+    transform: translate(0px, 0) rotate(0); }
+  48% {
+    transform: translate(3px, 0) rotate(0); }
+  50% {
+    transform: translate(10px, 0) rotate(0); }
+  52% {
+    transform: translate(7px, 0) rotate(0); }
+  54% {
+    transform: translate(-8px, 0) rotate(0); }
+  56% {
+    transform: translate(-5px, 0) rotate(0); }
+  58% {
+    transform: translate(-4px, 0) rotate(0); }
+  60% {
+    transform: translate(7px, 0) rotate(0); }
+  62% {
+    transform: translate(-1px, 0) rotate(0); }
+  64% {
+    transform: translate(9px, 0) rotate(0); }
+  66% {
+    transform: translate(7px, 0) rotate(0); }
+  68% {
+    transform: translate(4px, 0) rotate(0); }
+  70% {
+    transform: translate(9px, 0) rotate(0); }
+  72% {
+    transform: translate(1px, 0) rotate(0); }
+  74% {
+    transform: translate(2px, 0) rotate(0); }
+  76% {
+    transform: translate(-9px, 0) rotate(0); }
+  78% {
+    transform: translate(0px, 0) rotate(0); }
+  80% {
+    transform: translate(0px, 0) rotate(0); }
+  82% {
+    transform: translate(6px, 0) rotate(0); }
+  84% {
+    transform: translate(-4px, 0) rotate(0); }
+  86% {
+    transform: translate(10px, 0) rotate(0); }
+  88% {
+    transform: translate(-5px, 0) rotate(0); }
+  90% {
+    transform: translate(-8px, 0) rotate(0); }
+  92% {
+    transform: translate(0px, 0) rotate(0); }
+  94% {
+    transform: translate(-5px, 0) rotate(0); }
+  96% {
+    transform: translate(-2px, 0) rotate(0); }
+  98% {
+    transform: translate(8px, 0) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+
+.shake-horizontal:hover,
+.shake-trigger:hover .shake-horizontal, .shake-horizontal.shake-freeze, .shake-horizontal.shake-constant {
+  animation-name: shake-horizontal;
+  animation-duration: 100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+
+@keyframes shake-vertical {
+  2% {
+    transform: translate(0, -5px) rotate(0); }
+  4% {
+    transform: translate(0, 3px) rotate(0); }
+  6% {
+    transform: translate(0, 0px) rotate(0); }
+  8% {
+    transform: translate(0, 3px) rotate(0); }
+  10% {
+    transform: translate(0, -1px) rotate(0); }
+  12% {
+    transform: translate(0, -4px) rotate(0); }
+  14% {
+    transform: translate(0, -3px) rotate(0); }
+  16% {
+    transform: translate(0, 0px) rotate(0); }
+  18% {
+    transform: translate(0, 5px) rotate(0); }
+  20% {
+    transform: translate(0, 9px) rotate(0); }
+  22% {
+    transform: translate(0, 7px) rotate(0); }
+  24% {
+    transform: translate(0, -3px) rotate(0); }
+  26% {
+    transform: translate(0, 10px) rotate(0); }
+  28% {
+    transform: translate(0, 1px) rotate(0); }
+  30% {
+    transform: translate(0, 8px) rotate(0); }
+  32% {
+    transform: translate(0, -7px) rotate(0); }
+  34% {
+    transform: translate(0, 5px) rotate(0); }
+  36% {
+    transform: translate(0, 2px) rotate(0); }
+  38% {
+    transform: translate(0, -7px) rotate(0); }
+  40% {
+    transform: translate(0, -2px) rotate(0); }
+  42% {
+    transform: translate(0, 10px) rotate(0); }
+  44% {
+    transform: translate(0, 2px) rotate(0); }
+  46% {
+    transform: translate(0, 0px) rotate(0); }
+  48% {
+    transform: translate(0, -5px) rotate(0); }
+  50% {
+    transform: translate(0, 10px) rotate(0); }
+  52% {
+    transform: translate(0, 1px) rotate(0); }
+  54% {
+    transform: translate(0, -7px) rotate(0); }
+  56% {
+    transform: translate(0, -7px) rotate(0); }
+  58% {
+    transform: translate(0, -9px) rotate(0); }
+  60% {
+    transform: translate(0, 6px) rotate(0); }
+  62% {
+    transform: translate(0, 5px) rotate(0); }
+  64% {
+    transform: translate(0, -9px) rotate(0); }
+  66% {
+    transform: translate(0, 3px) rotate(0); }
+  68% {
+    transform: translate(0, 3px) rotate(0); }
+  70% {
+    transform: translate(0, -5px) rotate(0); }
+  72% {
+    transform: translate(0, 9px) rotate(0); }
+  74% {
+    transform: translate(0, 8px) rotate(0); }
+  76% {
+    transform: translate(0, 1px) rotate(0); }
+  78% {
+    transform: translate(0, 8px) rotate(0); }
+  80% {
+    transform: translate(0, -1px) rotate(0); }
+  82% {
+    transform: translate(0, -6px) rotate(0); }
+  84% {
+    transform: translate(0, -4px) rotate(0); }
+  86% {
+    transform: translate(0, 2px) rotate(0); }
+  88% {
+    transform: translate(0, -5px) rotate(0); }
+  90% {
+    transform: translate(0, 10px) rotate(0); }
+  92% {
+    transform: translate(0, -4px) rotate(0); }
+  94% {
+    transform: translate(0, -1px) rotate(0); }
+  96% {
+    transform: translate(0, 2px) rotate(0); }
+  98% {
+    transform: translate(0, 2px) rotate(0); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+
+.shake-vertical:hover,
+.shake-trigger:hover .shake-vertical, .shake-vertical.shake-freeze, .shake-vertical.shake-constant {
+  animation-name: shake-vertical;
+  animation-duration: 100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+
+@keyframes shake-rotate {
+  2% {
+    transform: translate(0, 0) rotate(3.5deg); }
+  4% {
+    transform: translate(0, 0) rotate(-1.5deg); }
+  6% {
+    transform: translate(0, 0) rotate(-5.5deg); }
+  8% {
+    transform: translate(0, 0) rotate(0.5deg); }
+  10% {
+    transform: translate(0, 0) rotate(4.5deg); }
+  12% {
+    transform: translate(0, 0) rotate(-3.5deg); }
+  14% {
+    transform: translate(0, 0) rotate(5.5deg); }
+  16% {
+    transform: translate(0, 0) rotate(5.5deg); }
+  18% {
+    transform: translate(0, 0) rotate(0.5deg); }
+  20% {
+    transform: translate(0, 0) rotate(7.5deg); }
+  22% {
+    transform: translate(0, 0) rotate(-4.5deg); }
+  24% {
+    transform: translate(0, 0) rotate(-0.5deg); }
+  26% {
+    transform: translate(0, 0) rotate(4.5deg); }
+  28% {
+    transform: translate(0, 0) rotate(2.5deg); }
+  30% {
+    transform: translate(0, 0) rotate(-4.5deg); }
+  32% {
+    transform: translate(0, 0) rotate(4.5deg); }
+  34% {
+    transform: translate(0, 0) rotate(3.5deg); }
+  36% {
+    transform: translate(0, 0) rotate(-6.5deg); }
+  38% {
+    transform: translate(0, 0) rotate(5.5deg); }
+  40% {
+    transform: translate(0, 0) rotate(-4.5deg); }
+  42% {
+    transform: translate(0, 0) rotate(1.5deg); }
+  44% {
+    transform: translate(0, 0) rotate(1.5deg); }
+  46% {
+    transform: translate(0, 0) rotate(-4.5deg); }
+  48% {
+    transform: translate(0, 0) rotate(-1.5deg); }
+  50% {
+    transform: translate(0, 0) rotate(-4.5deg); }
+  52% {
+    transform: translate(0, 0) rotate(-3.5deg); }
+  54% {
+    transform: translate(0, 0) rotate(-6.5deg); }
+  56% {
+    transform: translate(0, 0) rotate(-3.5deg); }
+  58% {
+    transform: translate(0, 0) rotate(2.5deg); }
+  60% {
+    transform: translate(0, 0) rotate(3.5deg); }
+  62% {
+    transform: translate(0, 0) rotate(-0.5deg); }
+  64% {
+    transform: translate(0, 0) rotate(2.5deg); }
+  66% {
+    transform: translate(0, 0) rotate(0.5deg); }
+  68% {
+    transform: translate(0, 0) rotate(4.5deg); }
+  70% {
+    transform: translate(0, 0) rotate(-6.5deg); }
+  72% {
+    transform: translate(0, 0) rotate(-4.5deg); }
+  74% {
+    transform: translate(0, 0) rotate(4.5deg); }
+  76% {
+    transform: translate(0, 0) rotate(7.5deg); }
+  78% {
+    transform: translate(0, 0) rotate(-5.5deg); }
+  80% {
+    transform: translate(0, 0) rotate(1.5deg); }
+  82% {
+    transform: translate(0, 0) rotate(-5.5deg); }
+  84% {
+    transform: translate(0, 0) rotate(-1.5deg); }
+  86% {
+    transform: translate(0, 0) rotate(0.5deg); }
+  88% {
+    transform: translate(0, 0) rotate(-6.5deg); }
+  90% {
+    transform: translate(0, 0) rotate(4.5deg); }
+  92% {
+    transform: translate(0, 0) rotate(-4.5deg); }
+  94% {
+    transform: translate(0, 0) rotate(4.5deg); }
+  96% {
+    transform: translate(0, 0) rotate(-1.5deg); }
+  98% {
+    transform: translate(0, 0) rotate(7.5deg); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+
+.shake-rotate:hover,
+.shake-trigger:hover .shake-rotate, .shake-rotate.shake-freeze, .shake-rotate.shake-constant {
+  animation-name: shake-rotate;
+  animation-duration: 100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+
+@keyframes shake-opacity {
+  10% {
+    transform: translate(-4px, 2px) rotate(-0.5deg);
+    opacity: 0.87; }
+  20% {
+    transform: translate(-1px, -3px) rotate(0.5deg);
+    opacity: 0.01; }
+  30% {
+    transform: translate(-4px, -2px) rotate(1.5deg);
+    opacity: 0.76; }
+  40% {
+    transform: translate(-1px, 1px) rotate(0.5deg);
+    opacity: 0.4; }
+  50% {
+    transform: translate(-1px, -1px) rotate(2.5deg);
+    opacity: 0.1; }
+  60% {
+    transform: translate(-1px, -1px) rotate(-1.5deg);
+    opacity: 0.09; }
+  70% {
+    transform: translate(-2px, -1px) rotate(-1.5deg);
+    opacity: 0.3; }
+  80% {
+    transform: translate(-1px, -3px) rotate(-0.5deg);
+    opacity: 0.91; }
+  90% {
+    transform: translate(2px, 5px) rotate(-0.5deg);
+    opacity: 0.76; }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+
+.shake-opacity:hover,
+.shake-trigger:hover .shake-opacity, .shake-opacity.shake-freeze, .shake-opacity.shake-constant {
+  animation-name: shake-opacity;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+
+@keyframes shake-crazy {
+  10% {
+    transform: translate(16px, 11px) rotate(5deg);
+    opacity: 0.14; }
+  20% {
+    transform: translate(17px, -8px) rotate(8deg);
+    opacity: 0.46; }
+  30% {
+    transform: translate(9px, 8px) rotate(5deg);
+    opacity: 0.22; }
+  40% {
+    transform: translate(16px, 14px) rotate(1deg);
+    opacity: 0.92; }
+  50% {
+    transform: translate(1px, 11px) rotate(4deg);
+    opacity: 0.2; }
+  60% {
+    transform: translate(13px, -10px) rotate(-4deg);
+    opacity: 0.72; }
+  70% {
+    transform: translate(6px, -10px) rotate(-3deg);
+    opacity: 0.2; }
+  80% {
+    transform: translate(11px, -18px) rotate(8deg);
+    opacity: 0.7; }
+  90% {
+    transform: translate(-10px, -18px) rotate(9deg);
+    opacity: 0.34; }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+
+.shake-crazy:hover,
+.shake-trigger:hover .shake-crazy, .shake-crazy.shake-freeze, .shake-crazy.shake-constant {
+  animation-name: shake-crazy;
+  animation-duration: 100ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+
+@keyframes shake-chunk {
+  2% {
+    transform: translate(-10px, -2px) rotate(8deg); }
+  4% {
+    transform: translate(5px, 12px) rotate(10deg); }
+  6% {
+    transform: translate(6px, 6px) rotate(0deg); }
+  8% {
+    transform: translate(-13px, -12px) rotate(-6deg); }
+  10% {
+    transform: translate(15px, 11px) rotate(15deg); }
+  12% {
+    transform: translate(-4px, -8px) rotate(2deg); }
+  14% {
+    transform: translate(0px, -11px) rotate(2deg); }
+  16% {
+    transform: translate(10px, 8px) rotate(9deg); }
+  18% {
+    transform: translate(3px, 12px) rotate(15deg); }
+  20% {
+    transform: translate(7px, 1px) rotate(10deg); }
+  22% {
+    transform: translate(10px, 15px) rotate(-13deg); }
+  24% {
+    transform: translate(3px, 5px) rotate(12deg); }
+  26% {
+    transform: translate(-5px, -11px) rotate(-11deg); }
+  28% {
+    transform: translate(11px, 11px) rotate(3deg); }
+  30% {
+    transform: translate(-3px, -1px) rotate(-6deg); }
+  32% {
+    transform: translate(11px, 5px) rotate(14deg); }
+  34% {
+    transform: translate(-11px, -7px) rotate(-2deg); }
+  36% {
+    transform: translate(3px, 6px) rotate(-14deg); }
+  38% {
+    transform: translate(10px, 11px) rotate(-5deg); }
+  0%, 40%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+
+.shake-chunk:hover,
+.shake-trigger:hover .shake-chunk, .shake-chunk.shake-freeze, .shake-chunk.shake-constant {
+  animation-name: shake-chunk;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
+
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+html, body, div, span,
+applet, object, iframe,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a,
+abbr, acronym, address,
+big, cite, code, del, dfn,
+em, font, figure, img, ins, kbd,
+q, s, samp, small, strike,
+strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label,
+legend, table, caption,
+tbody, tfoot, thead,
+tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+:focus {
+  outline: 0; }
+
+body {
+  line-height: 1;
+  color: black;
+  background: white; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal; }
+
+blockquote:before,
+blockquote:after,
+q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+a, a:link {
+  text-decoration: none; }
+
+input {
+  border: none; }
+
+header, nav, section,
+article, aside, footer {
+  display: block; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* Clearfix
+-------------------------------------------------- */
+.cf:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+html {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+  html {
+    font-size: 0.8rem; }
+    @media screen and (min-width: 20rem) {
+      html {
+        font-size: calc(0.8rem + 0.7 * ((100vw - 20rem) / 30)); } }
+    @media screen and (min-width: 50rem) {
+      html {
+        font-size: 1.5rem; } }
+
+body {
+  background: url(../img/bgGif.gif) repeat;
+  color: #333;
+  /* width: 80%; */
+  font-family: "Times New Roman", serif;
+  line-height: 1.5rem; }
+
+a {
+  color: #0000EE;
+  text-decoration: underline; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  margin-bottom: 1.5rem; }
+
+h1 {
+  color: #ddac00;
+  font-style: italic;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-top: calc((1.5rem - 2rem) + 1.5rem);
+  text-shadow: 2px 2px 0px rgba(63, 63, 63, 0.8); }
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-top: calc((1.5rem - 1.5rem) + 1.5rem*2); }
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  margin-top: calc((1.5rem - 1.25rem) + 1.5rem*2); }
+
+h4 {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-top: calc((1.5rem - 1rem) + 1.5rem*2); }
+
+h5 {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  margin-top: calc((1.5rem - 0.875rem) + 1.5rem*2); }
+
+#wrap {
+  background: url(../img/bgTexture.jpg) repeat;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px 60px;
+  border: 3px solid #fff;
+  outline: 5px solid #424242; }
+
+/* Items List */
+div#itemList {
+  margin-top: 50px; }
+
+/* Input Form */
+input#name {
+  border-top: 5px solid #EEEEEE;
+  border-left: 5px solid #EEEEEE;
+  border-bottom: 5px solid #757575;
+  border-right: 5px solid #757575; }
+  input#name:hover {
+    border-top: 5px solid #757575;
+    border-left: 5px solid #757575;
+    border-bottom: 5px solid #EEEEEE;
+    border-right: 5px solid #EEEEEE; }
+
+button#add, .remove, .checkbox {
+  cursor: pointer; }
+
+button#add {
+  background-color: #f1a872;
+  font-weight: 700;
+  color: #0000EE;
+  padding: 5px 15px;
+  margin-left: 20px;
+  outline: solid 1px #424242;
+  border-top: 5px solid #EEEEEE;
+  border-left: 5px solid #EEEEEE;
+  border-bottom: 5px solid #757575;
+  border-right: 5px solid #757575; }
+  button#add:active {
+    border-top: 5px solid #757575;
+    border-left: 5px solid #757575;
+    border-bottom: 5px solid #EEEEEE;
+    border-right: 5px solid #EEEEEE; }
+
+button.remove {
+  vertical-align: middle;
+  float: right;
+  outline: 1px solid red; }
+  button.remove:hover {
+    background-color: red;
+    -webkit-animation: flicker 0.1s infinite;
+    /* Safari 4+ */
+    -moz-animation: flicker 0.1s infinite;
+    /* Fx 5+ */
+    -o-animation: flicker 0.1s infinite;
+    /* Opera 12+ */
+    animation: flicker 0.1s infinite;
+    /* IE 10+, Fx 29+ */ }
+
+div.item {
+  padding: 5px 10px 12px;
+  outline: 1px solid #424242;
+  background: #BDBDBD;
+  background: -moz-linear-gradient(#efefef 1%, #aaaaaa 97%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(#efefef 1%, #aaaaaa 97%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(#efefef 1%, #aaaaaa 97%);
+  border-top: 5px solid #EEEEEE;
+  border-left: 5px solid #EEEEEE;
+  border-bottom: 5px solid #757575;
+  border-right: 5px solid #757575; }
+  div.item:hover {
+    background: -moz-linear-gradient(#aaaaaa 1%, #efefef 97%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(#aaaaaa 1%, #efefef 97%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(#aaaaaa 1%, #efefef 97%); }
+  div.item .itemName {
+    margin-left: 10px; }
+    div.item .itemName.done {
+      color: red;
+      text-decoration: line-through; }
+
+.checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  outline: 1px solid #616161;
+  border-top: 4px solid #757575;
+  border-left: 4px solid #757575;
+  border-bottom: 4px solid #EEEEEE;
+  border-right: 4px solid #EEEEEE; }
+  .checkbox.checked {
+    background: url(../img/check.gif) no-repeat center;
+    background-size: 22px 22px; }
+
+/* Please set Screen Res Text  */
+.setScreenRes {
+  font-weight: bold;
+  font-size: 20px; }
+
+.red {
+  color: red; }
+
+/* anything that is not global layouts like footer, header. Modules are features that are interchangeable, like video, twoColumn, and other features */
+/* specific needs for a certain template. For unique sites that look somewhat different than the rest.
+This templates overwrite everything. */

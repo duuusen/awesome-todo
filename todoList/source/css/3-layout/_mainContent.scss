@@ -1,0 +1,86 @@
+#wrap {
+  background: url(../img/bgTexture.jpg) repeat;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px 60px;
+  border: 3px solid #fff;
+  outline: 5px solid $grey8;
+}
+/* Items List */
+div#itemList {
+  margin-top: 50px;
+}
+/* Input Form */
+input#name {
+  @include ogBorder(5px, $grey2, $grey6);
+  &:hover {
+    @include ogBorder(5px, $grey6, $grey2);
+  }
+}
+button#add, .remove, .checkbox {
+  cursor: pointer;
+}
+button#add {
+  background-color: rgb(241, 168, 114);
+  font-weight: 700;
+  color: $ogBlue;
+  padding: 5px 15px;
+  margin-left: 20px;
+  outline: solid 1px $grey8;
+  @include ogBorder(5px, $grey2, $grey6);
+
+  &:active {
+    @include ogBorder(5px, $grey6, $grey2);
+  }
+}
+button.remove {
+  vertical-align: middle;
+  float: right;
+  outline: 1px solid red;
+  &:hover {
+    background-color: red;
+      @include animation(flicker, 0.1s, infinite);
+  }
+}
+div.item {
+  padding: 5px 10px 12px;
+  outline: 1px solid $grey8;
+  background: $grey4;
+  background: -moz-linear-gradient(rgba(239,239,239,1) 1%, rgba(170,170,170,1) 97%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(rgba(239,239,239,1) 1%,rgba(170,170,170,1) 97%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(rgba(239,239,239,1) 1%,rgba(170,170,170,1) 97%);
+  @include ogBorder(5px, $grey2, $grey6);
+  &:hover {
+    background: -moz-linear-gradient(rgba(170,170,170,1) 1%, rgba(239,239,239,1) 97%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(rgba(170,170,170,1) 1%,rgba(239,239,239,1) 97%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(rgba(170,170,170,1) 1%,rgba(239,239,239,1) 97%);
+  }
+  & .itemName {
+    margin-left: 10px;
+    &.done {
+      color: red;
+      text-decoration: line-through;
+    }
+  }
+}
+.checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  outline: 1px solid $grey7;
+  @include ogBorder(4px, $grey6, $grey2);
+  &.checked {
+    background: url(../img/check.gif) no-repeat center;
+    background-size: 22px 22px;
+  }
+}
+/* Please set Screen Res Text  */
+.setScreenRes {
+  font-weight: bold;
+  font-size: 20px;
+}
+.red {
+	color: red;
+}

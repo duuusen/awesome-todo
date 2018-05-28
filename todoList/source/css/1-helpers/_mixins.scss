@@ -1,0 +1,58 @@
+/* Anwendung:
+@include borderRadius(5px);
+-------------------------------------------------- */
+@mixin borderRadius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+/* Don't forget to create Keyframe first */
+@mixin animation($name,$duration,$repeat) {
+  -webkit-animation: $name $duration $repeat; /* Safari 4+ */
+  -moz-animation: $name $duration $repeat; /* Fx 5+ */
+  -o-animation: $name $duration $repeat; /* Opera 12+ */
+  animation: $name $duration $repeat; /* IE 10+, Fx 29+ */
+}
+@mixin ogBorder($thickness, $col1, $col2) {
+  border-top: $thickness solid $col1;
+  border-left: $thickness solid $col1;
+  border-bottom: $thickness solid $col2;
+  border-right: $thickness solid $col2;
+}
+/* codepen.io/MadeByMike/pen/bEEGvv/ */
+$baseline: 1.5rem;
+
+$minScreen: 20rem;
+$maxScreen: 50rem;
+$minFont: .8rem;
+$maxFont: 1.5rem; // 2
+
+$h1: 2rem; // 2
+$h2: 1.5rem;
+$h3: 1.25rem;
+$h4: 1rem;
+$h5: .875rem;
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+	& {
+		@each $property in $properties {
+			#{$property}: $min-value;
+		}
+
+		@media screen and (min-width: $min-vw) {
+			@each $property in $properties {
+				#{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+			}
+		}
+
+		@media screen and (min-width: $max-vw) {
+			@each $property in $properties {
+				#{$property}: $max-value;
+			}
+		}
+	}
+}
+@function strip-unit($value) {
+	@return $value / ($value * 0 + 1);
+}

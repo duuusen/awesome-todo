@@ -1,0 +1,19 @@
+html {
+	margin: 0;
+	padding: 0;
+	@include fluid-type(font-size, $minScreen, $maxScreen, $minFont, $maxFont);
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+}
+body {
+	background: url(../img/bgGif.gif) repeat;
+	color: $textColor;
+	/* width: 80%; */
+	font-family: $oldschool;
+	line-height: $baseline;
+}
+a {
+	color: $ogBlue;
+	text-decoration: underline;
+}

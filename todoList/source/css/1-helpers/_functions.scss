@@ -1,0 +1,16 @@
+.blink {
+  animation: blink 1s linear infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+@-webkit-keyframes flicker {
+  0%, 49% {
+    background-color: rgba(255, 255, 255, 0); // Transparent Background
+    color: #000;
+  }
+  50%, 100% {
+    background-color: red; /* fff500 */
+    color: #fff;
+  }
+}
